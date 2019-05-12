@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2007539722884BF400B2326A /* Haiku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007539622884BF400B2326A /* Haiku.swift */; };
+		2007539822884BF400B2326A /* Haiku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007539622884BF400B2326A /* Haiku.swift */; };
+		2007539A22884CDB00B2326A /* HaikuGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007539922884CDB00B2326A /* HaikuGenerator.swift */; };
+		2007539B22884CDB00B2326A /* HaikuGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007539922884CDB00B2326A /* HaikuGenerator.swift */; };
+		2007539D22884D6E00B2326A /* HaikuPoemGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007539C22884D6E00B2326A /* HaikuPoemGeneratorTests.swift */; };
+		2007539E22885B2000B2326A /* HaikuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022C675228767A10029D0B3 /* HaikuViewController.swift */; };
+		2007539F22885B2100B2326A /* HaikuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022C675228767A10029D0B3 /* HaikuViewController.swift */; };
 		2022C676228767A10029D0B3 /* HaikuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022C675228767A10029D0B3 /* HaikuViewController.swift */; };
-		2022C677228767A10029D0B3 /* HaikuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022C675228767A10029D0B3 /* HaikuViewController.swift */; };
-		2022C678228767A10029D0B3 /* HaikuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022C675228767A10029D0B3 /* HaikuViewController.swift */; };
 		20B7A4A3227F2CF4007E490D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7A4A2227F2CF4007E490D /* AppDelegate.swift */; };
-		20B7A4A5227F2CF4007E490D /* WordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7A4A4227F2CF4007E490D /* WordGenerator.swift */; };
+		20B7A4A5227F2CF4007E490D /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7A4A4227F2CF4007E490D /* ServiceManager.swift */; };
 		20B7A4A8227F2CF4007E490D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B7A4A6227F2CF4007E490D /* Main.storyboard */; };
 		20B7A4AA227F2CF7007E490D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B7A4A9227F2CF7007E490D /* Assets.xcassets */; };
 		20B7A4AD227F2CF7007E490D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B7A4AB227F2CF7007E490D /* LaunchScreen.storyboard */; };
-		20B7A4B8227F2CF7007E490D /* HaikuGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7A4B7227F2CF7007E490D /* HaikuGeneratorTests.swift */; };
+		20B7A4B8227F2CF7007E490D /* ServiceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7A4B7227F2CF7007E490D /* ServiceManagerTests.swift */; };
 		20B7A4C3227F2CF7007E490D /* HaikuGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7A4C2227F2CF7007E490D /* HaikuGeneratorUITests.swift */; };
-		20C02180227F42E400F61560 /* WordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7A4A4227F2CF4007E490D /* WordGenerator.swift */; };
+		20C02180227F42E400F61560 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7A4A4227F2CF4007E490D /* ServiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,16 +43,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2007539622884BF400B2326A /* Haiku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haiku.swift; sourceTree = "<group>"; };
+		2007539922884CDB00B2326A /* HaikuGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaikuGenerator.swift; sourceTree = "<group>"; };
+		2007539C22884D6E00B2326A /* HaikuPoemGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaikuPoemGeneratorTests.swift; sourceTree = "<group>"; };
 		2022C675228767A10029D0B3 /* HaikuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaikuViewController.swift; sourceTree = "<group>"; };
 		20B7A49F227F2CF4007E490D /* HaikuGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaikuGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B7A4A2227F2CF4007E490D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20B7A4A4227F2CF4007E490D /* WordGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGenerator.swift; sourceTree = "<group>"; };
+		20B7A4A4227F2CF4007E490D /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		20B7A4A7227F2CF4007E490D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20B7A4A9227F2CF7007E490D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20B7A4AC227F2CF7007E490D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20B7A4AE227F2CF7007E490D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20B7A4B3227F2CF7007E490D /* HaikuGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaikuGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		20B7A4B7227F2CF7007E490D /* HaikuGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaikuGeneratorTests.swift; sourceTree = "<group>"; };
+		20B7A4B7227F2CF7007E490D /* ServiceManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerTests.swift; sourceTree = "<group>"; };
 		20B7A4B9227F2CF7007E490D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20B7A4BE227F2CF7007E490D /* HaikuGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaikuGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B7A4C2227F2CF7007E490D /* HaikuGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaikuGeneratorUITests.swift; sourceTree = "<group>"; };
@@ -104,7 +112,9 @@
 			children = (
 				20B7A4A2227F2CF4007E490D /* AppDelegate.swift */,
 				2022C675228767A10029D0B3 /* HaikuViewController.swift */,
-				20B7A4A4227F2CF4007E490D /* WordGenerator.swift */,
+				2007539922884CDB00B2326A /* HaikuGenerator.swift */,
+				20B7A4A4227F2CF4007E490D /* ServiceManager.swift */,
+				2007539622884BF400B2326A /* Haiku.swift */,
 				20B7A4A6227F2CF4007E490D /* Main.storyboard */,
 				20B7A4A9227F2CF7007E490D /* Assets.xcassets */,
 				20B7A4AB227F2CF7007E490D /* LaunchScreen.storyboard */,
@@ -116,7 +126,8 @@
 		20B7A4B6227F2CF7007E490D /* HaikuGeneratorTests */ = {
 			isa = PBXGroup;
 			children = (
-				20B7A4B7227F2CF7007E490D /* HaikuGeneratorTests.swift */,
+				20B7A4B7227F2CF7007E490D /* ServiceManagerTests.swift */,
+				2007539C22884D6E00B2326A /* HaikuPoemGeneratorTests.swift */,
 				20B7A4B9227F2CF7007E490D /* Info.plist */,
 			);
 			path = HaikuGeneratorTests;
@@ -262,8 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2007539A22884CDB00B2326A /* HaikuGenerator.swift in Sources */,
+				2007539722884BF400B2326A /* Haiku.swift in Sources */,
 				2022C676228767A10029D0B3 /* HaikuViewController.swift in Sources */,
-				20B7A4A5227F2CF4007E490D /* WordGenerator.swift in Sources */,
+				20B7A4A5227F2CF4007E490D /* ServiceManager.swift in Sources */,
 				20B7A4A3227F2CF4007E490D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,9 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2022C677228767A10029D0B3 /* HaikuViewController.swift in Sources */,
-				20B7A4B8227F2CF7007E490D /* HaikuGeneratorTests.swift in Sources */,
-				20C02180227F42E400F61560 /* WordGenerator.swift in Sources */,
+				2007539D22884D6E00B2326A /* HaikuPoemGeneratorTests.swift in Sources */,
+				2007539B22884CDB00B2326A /* HaikuGenerator.swift in Sources */,
+				2007539822884BF400B2326A /* Haiku.swift in Sources */,
+				2007539E22885B2000B2326A /* HaikuViewController.swift in Sources */,
+				20B7A4B8227F2CF7007E490D /* ServiceManagerTests.swift in Sources */,
+				20C02180227F42E400F61560 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20B7A4C3227F2CF7007E490D /* HaikuGeneratorUITests.swift in Sources */,
-				2022C678228767A10029D0B3 /* HaikuViewController.swift in Sources */,
+				2007539F22885B2100B2326A /* HaikuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

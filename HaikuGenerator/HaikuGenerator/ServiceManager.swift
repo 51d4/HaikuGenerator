@@ -8,8 +8,8 @@
 
 import UIKit
 
-class WordGenerator {
-    func generateWord(parameters: String, completion: @escaping (_ string: String) -> Void) {
+class ServiceManager {
+    func fetchWords(parameters: String, completion: @escaping (_ array: [[AnyHashable: Any]]) -> Void) {
         let urlString = "https://api.datamuse.com/words" + parameters
         guard let url = URL(string: urlString) else {return}
 
@@ -23,9 +23,7 @@ class WordGenerator {
                     if let resultObject = try JSONSerialization.jsonObject(with: result, options: []) as? [[AnyHashable: Any]] {
                         print("Results: \(resultObject)")
                         
-                        if let firstWord = resultObject[0]["word"] as? String {
-                            completion(firstWord)
-                        }
+                        completion(resultObject)
                     }
                 } catch {
                     print("Unable to parse JSON response")
