@@ -9,11 +9,19 @@
 import UIKit
 
 class HaikuViewController: UIViewController {
+    
+    @IBOutlet weak var labelGeneratedContent: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    @IBAction func actionGenerateHaiku(_ sender: Any) {
         HaikuGenerator().generateFirstLine { (firstLine) in
-            print(firstLine)
+            DispatchQueue.main.async {
+                self.labelGeneratedContent.text = firstLine
+            }
         }
     }
 }
