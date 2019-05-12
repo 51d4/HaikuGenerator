@@ -10,15 +10,13 @@ import XCTest
 
 class HaikuPoemGeneratorTests: XCTestCase {
 
-    func testGenerateFirstLine() {
-        let expectedLine = "bitter wintertime"
-        let expectedNumberOfSyllabes = 5
-        
-        HaikuGenerator().generateFirstLine() { generatedLine in
+    func testGenerateRandomFirstLine() {
+        let expectedMinSyllablesCount = 4
+        HaikuGenerator().generateFirstLine { (firstLine) in
             let generatedCount = Haiku.shared.firstLineSyllablesCount
-
-            XCTAssertEqual(generatedLine, expectedLine)
-            XCTAssertEqual(generatedCount, expectedNumberOfSyllabes)
+            
+            XCTAssertNotEqual(firstLine, "")
+            XCTAssertGreaterThan(generatedCount, expectedMinSyllablesCount)
         }
     }
 }

@@ -9,41 +9,50 @@
 import Foundation
 
 class HaikuGenerator {
+    private let startingKeywords = ["winter", "summer", "autumn", "springtime"]
     private let serviceManager = ServiceManager()
     
     func generateFirstLine(completion: @escaping (_ firstLine: String) -> Void) {
-        generateNoun { (noun) in
-            self.generateAdjective(basedOn: noun, completion: { (adjective) in
+        guard let keyword = startingKeywords.randomElement() else {return}
+        let nounParameters = "?ml=\(keyword)&md=s&max=50"
+        generateWord(parameters: nounParameters) { (noun, syllables) in
+            print(noun + ", number of syllables: \(syllables)")
+            
+            Haiku.shared.firstLineSyllablesCount = syllables
+            Haiku.shared.firstLineNoun = noun
+            
+            let adjectiveParameters = "?rel_jjb=\(noun)&md=s&max=50"
+            self.generateWord(parameters: adjectiveParameters, completion: { (adjective, syllables) in
+                print(adjective + ", number of syllables: \(syllables)")
+                
+                Haiku.shared.firstLineSyllablesCount = Haiku.shared.firstLineSyllablesCount + syllables
+                Haiku.shared.firstLineAdjective = adjective
+                
+                Haiku.shared.firstLine = adjective + " " + noun
                 completion(adjective + " " + noun)
             })
         }
-        
     }
     
-    private func generateNoun(completion: @escaping (_ adjective: String) -> Void) {
-        serviceManager.fetchWords(parameters: "?ml=winter&md=s&max=4") { (result) in
-            if let noun = result[0]["word"] as? String, let syllables = result[0]["numSyllables"] as? Int {
-                print(noun + " \(syllables)")
-                Haiku.shared.firstLineSyllablesCount = syllables
-
-                completion(noun)
+    private func generateWord(parameters: String, completion: @escaping (_ word: String, _ syllables: Int) -> Void) {
+        serviceManager.fetchWords(parameters: parameters) { (result) in
+            let filteredResults = self.filter(array: result, maxSyllables: 5)
+            if let wordDictionary = filteredResults.randomElement(), let word = wordDictionary["word"] as? String,
+                let syllables = wordDictionary["numSyllables"] as? Int {
+                completion(word, syllables)
             }
         }
     }
     
-    private func generateAdjective(basedOn noun: String, completion: @escaping (_ adjective: String) -> Void) {
-        serviceManager.fetchWords(parameters: "?rel_jjb=\(noun)&md=s&max=4") { (result) in
-            for dictionary in result {
-                if let adjective = dictionary["word"] as? String,
-                    let syllables = dictionary["numSyllables"] as? Int,
-                    syllables == 5 - Haiku.shared.firstLineSyllablesCount {
-                    print(adjective + " \(syllables)")
-                    
-                    Haiku.shared.firstLineSyllablesCount = Haiku.shared.firstLineSyllablesCount + syllables
-                    completion(adjective)
-                    break
+    private func filter(array: [[AnyHashable: Any]], maxSyllables: Int) -> [[AnyHashable: Any]] {
+        return array
+            .compactMap({ (dictionary) -> [String: Any]? in
+                if let noun = dictionary["word"] as? String,
+                    let syllables = dictionary["numSyllables"] as? Int, syllables <= maxSyllables {
+                    return ["word": noun,
+                            "numSyllables": syllables]
                 }
-            }
-        }
+                return nil
+            })
     }
 }

@@ -11,6 +11,7 @@ import Foundation
 class Haiku {
     static let shared = Haiku()
     
+    var firstLine: String
     var firstLineNoun: String
     var firstLineAdjective: String
     var firstLineFirstPreposition: String?
@@ -18,6 +19,7 @@ class Haiku {
     var firstLineSyllablesCount: Int
     
     private init() {
+        firstLine = ""
         firstLineNoun = ""
         firstLineAdjective = ""
         firstLineSyllablesCount = 0

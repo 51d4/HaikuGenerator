@@ -12,8 +12,8 @@ class HaikuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        HaikuGenerator().generateFirstLine { (firstLine) in
-//            print(firstLine)
-//        }
+        HaikuGenerator().generateFirstLine { (firstLine) in
+            print(firstLine)
+        }
     }
 }

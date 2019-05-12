@@ -12,8 +12,6 @@
 		2007539A22884CDB00B2326A /* HaikuGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007539922884CDB00B2326A /* HaikuGenerator.swift */; };
 		2007539B22884CDB00B2326A /* HaikuGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007539922884CDB00B2326A /* HaikuGenerator.swift */; };
 		2007539D22884D6E00B2326A /* HaikuPoemGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007539C22884D6E00B2326A /* HaikuPoemGeneratorTests.swift */; };
-		2007539E22885B2000B2326A /* HaikuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022C675228767A10029D0B3 /* HaikuViewController.swift */; };
-		2007539F22885B2100B2326A /* HaikuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022C675228767A10029D0B3 /* HaikuViewController.swift */; };
 		2022C676228767A10029D0B3 /* HaikuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2022C675228767A10029D0B3 /* HaikuViewController.swift */; };
 		20B7A4A3227F2CF4007E490D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7A4A2227F2CF4007E490D /* AppDelegate.swift */; };
 		20B7A4A5227F2CF4007E490D /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B7A4A4227F2CF4007E490D /* ServiceManager.swift */; };
@@ -288,7 +286,6 @@
 				2007539D22884D6E00B2326A /* HaikuPoemGeneratorTests.swift in Sources */,
 				2007539B22884CDB00B2326A /* HaikuGenerator.swift in Sources */,
 				2007539822884BF400B2326A /* Haiku.swift in Sources */,
-				2007539E22885B2000B2326A /* HaikuViewController.swift in Sources */,
 				20B7A4B8227F2CF7007E490D /* ServiceManagerTests.swift in Sources */,
 				20C02180227F42E400F61560 /* ServiceManager.swift in Sources */,
 			);
@@ -299,7 +296,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				20B7A4C3227F2CF7007E490D /* HaikuGeneratorUITests.swift in Sources */,
-				2007539F22885B2100B2326A /* HaikuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
